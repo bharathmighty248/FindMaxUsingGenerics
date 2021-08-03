@@ -25,13 +25,31 @@ namespace MaximumValue
         }
 
         /// <summary>
-        /// Method for finding Maximum Int value 
+        /// Method for finding Maximum Float value 
         /// </summary>
         /// <param name="firstValue"></param>
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
         public double MaximumFloat(double firstValue, double secondValue, double thirdValue)
+        {
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+                return firstValue;
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+                return secondValue;
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+                return thirdValue;
+            throw new Exception("3 values are Equal");
+        }
+
+        /// <summary>
+        /// Method for finding Maximum String value 
+        /// </summary>
+        /// <param name="firstValue"></param>
+        /// <param name="secondValue"></param>
+        /// <param name="thirdValue"></param>
+        /// <returns></returns>
+        public string MaximumString(string firstValue, string secondValue, string thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;

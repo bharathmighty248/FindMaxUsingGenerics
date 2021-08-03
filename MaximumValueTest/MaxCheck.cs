@@ -69,5 +69,35 @@ namespace MaximumValueTest
             double actualMax = check.MaximumFloat(20.00, 10.00, 30.00);
             Assert.AreEqual(30.00, actualMax);
         }
+
+        /// <summary>
+        /// TestCase 3.1
+        /// </summary>
+        [Test]
+        public void GivenMaxStringFirstPosition_whenFindMaxString_shouldReturnsFirstValue()
+        {
+            string actualMax = check.MaximumString("Peach","Apple","Banana");
+            Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 3.2
+        /// </summary>
+        [Test]
+        public void GivenMaxStringSecondPosition_whenFindMaxString_shouldReturnsSecondValue()
+        {
+            string actualMax = check.MaximumString("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 3.3
+        /// </summary>
+        [Test]
+        public void GivenMaxStringThirdPosition_whenFindMaxString_shouldReturnsThirdValue()
+        {
+            string actualMax = check.MaximumString("Banana", "Apple", "Peach");
+            Assert.AreEqual("Peach", actualMax);
+        }
     }
 }

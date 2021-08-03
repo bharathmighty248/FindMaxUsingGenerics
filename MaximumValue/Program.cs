@@ -7,7 +7,8 @@ namespace MaximumValue
         static void Main(string[] args)
         {
             FindMax findMax = new FindMax();
-            findMax.Maximum(234, 456, 678);
+            findMax.MaximumInt(234, 456, 678);
+            findMax.MaximumFloat(234.00, 456.00, 678.00);
         }
     }
 }

@@ -36,6 +36,14 @@ namespace MaximumValue
             return maxValue[^1];    //^1 is the first Index from End, So it gives sorted Max Value from End of Array
         }
 
+        /// <summary>
+        /// Maximum Method to Find Maximim Value
+        /// </summary>
+        public void PrintMax()
+        {
+            var print = Maximum(this.value);
+            Console.WriteLine("Maximum Value is: " + print);
+        }
 
     }
 }

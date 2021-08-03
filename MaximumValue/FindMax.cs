@@ -8,27 +8,32 @@ namespace MaximumValue
     {
         /// <summary>
         /// Generic Class for finding Maximum value Int Or Float Or String (With Constructor)
-        /// </summary>
-        /// <param name="firstValue"></param>
-        /// <param name="secondValue"></param>
-        /// <param name="thirdValue"></param>
-        /// <returns></returns>
-        public T firstValue, secondValue, thirdValue;
-        public FindMax(T firstValue, T secondValue, T thirdValue)
+        /// Array is for Taking Morethan 3 Parameters
+        /// </summary> 
+        public T[] value;
+        public FindMax(T[] value)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.value = value;
         }
-        public T Maximum()
+
+        /// <summary>
+        /// First Sort the given Array of Values
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public T[] Sort(T[] values)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-                return firstValue;
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-                return secondValue;
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-                return thirdValue;
-            throw new Exception("3 values are Equal");
+            Array.Sort(values);
+            return values;
+        }
+
+        /// <summary>
+        /// Maximum Method to Find Maximim Value
+        /// </summary>
+        public T Maximum(T[] values)
+        {
+            var maxValue = Sort(values);
+            return maxValue[^1];    //^1 is the first Index from End, So it gives sorted Max Value from End of Array
         }
 
 

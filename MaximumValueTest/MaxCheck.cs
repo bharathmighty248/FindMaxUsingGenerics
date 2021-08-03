@@ -5,7 +5,6 @@ namespace MaximumValueTest
 {
     public class Tests
     {
-        FindMax check = new FindMax();
         //Assign
         //Act
         //Assert
@@ -16,7 +15,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxIntegerFirstPosition_whenFindMaxInteger_shouldReturnsFirstValue()
         {
-            int actualMax = check.Maximum(30, 20, 10);
+            FindMax<int> check = new FindMax<int>(30, 20, 10);
+            int actualMax = check.Maximum();
             Assert.AreEqual(30, actualMax);
         }
 
@@ -26,7 +26,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxIntegerSecondPosition_whenFindMaxInteger_shouldReturnsSecondValue()
         {
-            int actualMax = check.Maximum(20, 30, 10);
+            FindMax<int> check = new FindMax<int>(20, 30, 10);
+            int actualMax = check.Maximum();
             Assert.AreEqual(30, actualMax);
         }
 
@@ -36,7 +37,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxIntegerThirdPosition_whenFindMaxInteger_shouldReturnsThirdValue()
         {
-            int actualMax = check.Maximum(20, 10, 30);
+            FindMax<int> check = new FindMax<int>(20, 10, 30);
+            int actualMax = check.Maximum();
             Assert.AreEqual(30, actualMax);
         }
 
@@ -46,7 +48,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxFloatFirstPosition_whenFindMaxFloat_shouldReturnsFirstValue()
         {
-            double actualMax = check.Maximum(30.00, 20.00, 10.00);
+            FindMax<double> check = new FindMax<double>(30.00, 20.00, 10.00);
+            double actualMax = check.Maximum();
             Assert.AreEqual(30.00, actualMax);
         }
 
@@ -56,7 +59,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxFloatSecondPosition_whenFindMaxFloat_shouldReturnsSecondValue()
         {
-            double actualMax = check.Maximum(20.00, 30.00, 10.00);
+            FindMax<double> check = new FindMax<double>(20.00, 30.00, 10.00);
+            double actualMax = check.Maximum();
             Assert.AreEqual(30.00, actualMax);
         }
 
@@ -66,7 +70,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxFloatThirdPosition_whenFindMaxFloat_shouldReturnsThirdValue()
         {
-            double actualMax = check.Maximum(20.00, 10.00, 30.00);
+            FindMax<double> check = new FindMax<double>(20.00, 10.00, 30.00);
+            double actualMax = check.Maximum();
             Assert.AreEqual(30.00, actualMax);
         }
 
@@ -76,7 +81,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxStringFirstPosition_whenFindMaxString_shouldReturnsFirstValue()
         {
-            string actualMax = check.Maximum("Peach","Apple","Banana");
+            FindMax<string> check = new FindMax<string>("Peach", "Apple", "Banana");
+            string actualMax = check.Maximum();
             Assert.AreEqual("Peach", actualMax);
         }
 
@@ -86,7 +92,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxStringSecondPosition_whenFindMaxString_shouldReturnsSecondValue()
         {
-            string actualMax = check.Maximum("Apple", "Peach", "Banana");
+            FindMax<string> check = new FindMax<string>("Apple", "Peach", "Banana");
+            string actualMax = check.Maximum();
             Assert.AreEqual("Peach", actualMax);
         }
 
@@ -96,7 +103,8 @@ namespace MaximumValueTest
         [Test]
         public void GivenMaxStringThirdPosition_whenFindMaxString_shouldReturnsThirdValue()
         {
-            string actualMax = check.Maximum("Banana", "Apple", "Peach");
+            FindMax<string> check = new FindMax<string>("Apple", "Banana", "Peach");
+            string actualMax = check.Maximum();
             Assert.AreEqual("Peach", actualMax);
         }
     }

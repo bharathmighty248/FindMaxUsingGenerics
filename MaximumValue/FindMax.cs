@@ -4,16 +4,23 @@ using System.Text;
 
 namespace MaximumValue
 {
-    public class FindMax
+    public class FindMax<T> where T: IComparable
     {
         /// <summary>
-        /// Generic Method for finding Maximum value Int Or Float Or String 
+        /// Generic Class for finding Maximum value Int Or Float Or String (With Constructor)
         /// </summary>
         /// <param name="firstValue"></param>
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
-        public T Maximum<T>(T firstValue, T secondValue, T thirdValue) where T: IComparable
+        public T firstValue, secondValue, thirdValue;
+        public FindMax(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
+        public T Maximum()
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;
